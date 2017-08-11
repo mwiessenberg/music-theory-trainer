@@ -3,7 +3,7 @@
 A command line quiz to test your knowledge about:
 * Major keys
 
-This application will generate all possible questions for every configured key. Take a look at [the configuration][# Configuration] and [how to run the application][# Running].
+This application will generate all possible questions for every configured key. Take a look at [the configuration](#configuration) and [how to run the application](#running).
 
 ## Questions
 All questions are in eu.wiessenberg.quiz.questions and currently support:
@@ -13,10 +13,15 @@ All questions are in eu.wiessenberg.quiz.questions and currently support:
 * Enter the keys that have the given note
 * Guess the key given the list of accidentals
 
-# Configuration
+# <a name="configuration">Configuration
 enter the keys you want to learn in the [app.properties](src/main/resources/app.properties) file.  
 
-# Running
+# Compile
+`
+mvn clean package
+`
+
+# <a name="running">Running
 Run the Main class with an optional amount of questions. For example:
 
 `
