@@ -3,8 +3,18 @@
 A command line quiz to test your knowledge about:
 * Major keys
 
+This application will generate all possible questions for every configured key (see [the configuration][#Configuration] and [how to run the application][#Running]).
+
+## Questions
+All questions are in eu.wiessenberg.quiz.questions and currently support:
+
+* Guess the amount of flats and sharps for a given major key
+* Enter all accidentals for a given major key
+* Enter the keys that have the given note
+* Guess the key given the list of accidentals
+
 # Configuration
-enter the keys you want to learn in the app.properties file 
+enter the keys you want to learn in the [app.properties](src/main/resources/app.properties) file.  
 
 # Running
 Run the Main class with an optional amount of questions. For example:
