@@ -3,7 +3,7 @@
 A command line quiz to test your knowledge about:
 * Major keys
 
-This application will generate all possible questions for every configured key (see [the configuration][#Configuration] and [how to run the application][#Running]).
+This application will generate all possible questions for every configured key. Take a look at [the configuration][# Configuration] and [how to run the application][# Running].
 
 ## Questions
 All questions are in eu.wiessenberg.quiz.questions and currently support:
