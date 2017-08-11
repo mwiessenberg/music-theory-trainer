@@ -14,10 +14,10 @@ public class QuestionFactory {
         List<List<Note>> allKeys = KeyFactory.createAllMajorKeys();
 
         for (List<Note> key: allKeys) {
-//            allQuestions.add(new GuessTheKeyBasedOnAccedentals(key));
-//            allQuestions.add(new GuessTheAmountOfFlatsGivenAMajorKey(key));
-//            allQuestions.add(new GuessTheAmountOfSharpsGivenAMajorKey(key));
-//            allQuestions.add(new EnterAccidentalsForAGivenMajorKey(key));
+            allQuestions.add(new GuessTheKeyBasedOnAccedentals(key));
+            allQuestions.add(new GuessTheAmountOfFlatsGivenAMajorKey(key));
+            allQuestions.add(new GuessTheAmountOfSharpsGivenAMajorKey(key));
+            allQuestions.add(new EnterAccidentalsForAGivenMajorKey(key));
         }
 
         for (Note note: KeyFactory.getAllUniqueNotesFromAllMajorKeys()) {
