@@ -19,7 +19,7 @@ public class EnterAccidentalsForAGivenMajorKey extends KeyQuestion {
 
             return expectedAnswer.equals(answer1);
         });
-        setQuestion("Enter the accidentals for " + key.get(0).toString() + " major [seperated by a whitespace]", answer);
+        setQuestion("Enter the accidentals for " + key.get(0).toString() + " major: ", answer);
     }
 
     private List<Note> parseNotesFromInput(String actualAnswer) {

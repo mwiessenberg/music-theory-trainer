@@ -13,18 +13,18 @@ public class Quiz {
     public void generateQuiz(int nrQuestions) {
         questions = new ArrayList<>(nrQuestions);
 
-        PrettyPrinter.print(System.out, PrettyPrinter.ANSI_BLUE, "Generating questions...");
+        PrettyPrinter.print(System.out, PrettyPrinter.ANSI_PURPLE, "Generating questions...");
 
         questions = QuestionFactory.generateAllQuestions();
 
-        PrettyPrinter.println(System.out, PrettyPrinter.ANSI_BLUE, "done (a total of " + questions.size() + " questions are created)");
-        PrettyPrinter.print(System.out, PrettyPrinter.ANSI_BLUE, "Shuffling...");
+        PrettyPrinter.println(System.out, PrettyPrinter.ANSI_GREEN, "done (a total of " + questions.size() + " questions are created)");
+        PrettyPrinter.print(System.out, PrettyPrinter.ANSI_PURPLE, "Shuffling...");
 
         Collections.shuffle(questions);
         questions = nrQuestions < questions.size() ? questions.subList(0, nrQuestions): questions;
 
-        PrettyPrinter.println(System.out, PrettyPrinter.ANSI_BLUE, "done");
-        PrettyPrinter.println(System.out, PrettyPrinter.ANSI_BLUE, "Ready to play!\n");
+        PrettyPrinter.println(System.out, PrettyPrinter.ANSI_GREEN, "done");
+        PrettyPrinter.println(System.out, PrettyPrinter.ANSI_GREEN, "Ready to play!\n");
 
     }
 

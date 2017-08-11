@@ -64,6 +64,6 @@ public class ApplicationProperties {
     }
 
     public void printTo(PrintStream stream) {
-        stream.println("Using keys: " + PrettyPrinter.getNotesAsString(getKeys()));
+        PrettyPrinter.println(stream, PrettyPrinter.ANSI_PURPLE, "Using keys: " + PrettyPrinter.getNotesAsString(getKeys()));
     }
 }

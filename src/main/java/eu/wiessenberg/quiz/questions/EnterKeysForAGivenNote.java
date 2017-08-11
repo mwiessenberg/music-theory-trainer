@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class EnterKeysForAGivenAccidental extends KeyQuestion {
+public class EnterKeysForAGivenNote extends KeyQuestion {
 
-    public EnterKeysForAGivenAccidental(Note note) {
+    public EnterKeysForAGivenNote(Note note) {
         Answer answer = new Answer<>(findKeysForAccidental(note), (expectedAnswer, actualAnswer) -> {
             List<Note> answer1 = parseNotesFromInput(actualAnswer);
 
@@ -46,8 +46,6 @@ public class EnterKeysForAGivenAccidental extends KeyQuestion {
                 keysWithAccidentals.add(key.get(0));
             }
         }
-
-        System.out.println("note " + note + " is in key " + keysWithAccidentals);
 
         return keysWithAccidentals;
     }
