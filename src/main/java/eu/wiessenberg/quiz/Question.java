@@ -1,7 +1,5 @@
 package eu.wiessenberg.quiz;
 
-import eu.wiessenberg.quiz.Answer;
-
 public abstract class Question {
     private String question;
     private Answer answer;

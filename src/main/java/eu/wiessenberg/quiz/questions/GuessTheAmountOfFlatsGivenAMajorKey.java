@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GuessTheAmountOfFlatsGivenAMajorKey extends KeyQuestion {
-    private List<Note> key;
-    private Question question;
 
     public GuessTheAmountOfFlatsGivenAMajorKey(List<Note> key) {
         Answer answer = new Answer<>(String.valueOf(extractFlatsFrom(key).size()), new Answer.DefaultAnswerInterpreter());

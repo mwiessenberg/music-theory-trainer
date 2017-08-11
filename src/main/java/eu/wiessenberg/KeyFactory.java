@@ -48,11 +48,4 @@ public class KeyFactory {
 
         return uniqueNotes;
     }
-
-    public static List<Note> getRandomKey() {
-        List<Note> supportedKeys = ApplicationProperties.getInstance().getKeys();
-        Note key = supportedKeys.get(Math.abs(new Random().nextInt()) % supportedKeys.size());
-        return KeyFactory.createMajorKey(key);
-    }
-
 }

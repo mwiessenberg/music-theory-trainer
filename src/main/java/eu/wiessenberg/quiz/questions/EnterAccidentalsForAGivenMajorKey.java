@@ -12,12 +12,12 @@ public class EnterAccidentalsForAGivenMajorKey extends KeyQuestion {
 
     public EnterAccidentalsForAGivenMajorKey(List<Note> key) {
         Answer answer = new Answer<>(extractAccidentalsFrom(key), (expectedAnswer, actualAnswer) -> {
-            List<Note> answer1 = parseNotesFromInput(actualAnswer);
+            List<Note> userAnswer = parseNotesFromInput(actualAnswer);
 
             Collections.sort(expectedAnswer);
-            Collections.sort(answer1);
+            Collections.sort(userAnswer);
 
-            return expectedAnswer.equals(answer1);
+            return expectedAnswer.equals(userAnswer);
         });
         setQuestion("Enter the accidentals for " + key.get(0).toString() + " major: ", answer);
     }
