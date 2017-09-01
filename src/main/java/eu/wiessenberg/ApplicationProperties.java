@@ -29,7 +29,7 @@ public class ApplicationProperties {
 
     public void load() {
         Properties properies = new Properties();
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(PROPERTYFILE);
+        InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(PROPERTYFILE);
 
         try {
             properies.load(inputStream);
@@ -48,8 +48,8 @@ public class ApplicationProperties {
 
         if (rawValue != null) {
             String[] seperateKeys = rawValue.split(",");
-            for (int i = 0; i < seperateKeys.length; i++) {
-                keys.add(Note.fromString(seperateKeys[i].trim()));
+            for (String seperateKey : seperateKeys) {
+                keys.add(Note.fromString(seperateKey.trim()));
 
             }
         } else {

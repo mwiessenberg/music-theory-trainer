@@ -14,7 +14,7 @@ All questions are in eu.wiessenberg.quiz.questions and currently support:
 * Guess the key given the list of accidentals
 
 # <a name="configuration">Configuration
-enter the keys you want to learn in the [app.properties](src/main/resources/app.properties) file.  
+enter the keys you want to learn in the [app.properties](src/test/resources/app.properties) file.  
 
 # Compile
 `

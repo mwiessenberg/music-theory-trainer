@@ -6,8 +6,11 @@ import eu.wiessenberg.model.Note;
 import eu.wiessenberg.model.scales.MajorScale;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class KeyFactory {
     public static List<Note> createMajorKey(Note tonic) {
@@ -25,27 +28,17 @@ public class KeyFactory {
     }
 
     public static List<List<Note>> createAllMajorKeys() {
-        List<List<Note>> keys = new ArrayList<>();
-
-        for (Note key: ApplicationProperties.getInstance().getKeys()) {
-            keys.add(createMajorKey(key));
-        }
-
-        return keys;
+        return ApplicationProperties.getInstance().getKeys()
+                .stream()
+                .map(KeyFactory::createMajorKey)
+                .collect(Collectors.toList());
     }
 
     public static List<Note> getAllUniqueNotesFromAllMajorKeys() {
-        List<List<Note>> keys = createAllMajorKeys();
-        List<Note> uniqueNotes = new ArrayList<>();
-
-        for (List<Note> key: keys) {
-            for (Note note: key) {
-                if (!uniqueNotes.contains(note)) {
-                    uniqueNotes.add(note);
-                }
-            }
-        }
-
-        return uniqueNotes;
+        return createAllMajorKeys()
+                .stream()
+                .flatMap(Collection::stream)
+                .distinct()
+                .collect(Collectors.toList());
     }
 }
