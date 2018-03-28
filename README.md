@@ -12,6 +12,8 @@ All questions are in eu.wiessenberg.quiz.questions and currently support:
 * Enter all accidentals for a given major key
 * Enter the keys that have the given note
 * Guess the key given the list of accidentals
+* Guess the degree of one of the seven modes
+* Guess the name of one of the seven modes given the degree
 
 # <a name="configuration">Configuration
 enter the keys you want to learn in the [app.properties](src/test/resources/app.properties) file.  
